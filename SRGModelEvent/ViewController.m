@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Counter.h"
 
 @interface ViewController ()
+
+@property IBOutlet UILabel *countLabel;
+@property Counter *counter;
+@property SRGModelEventObserver *observer;
 
 @end
 
@@ -16,12 +21,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.counter = [Counter new];
+    [self p_updateCountLabel];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    __weak typeof(self) wSelf = self;
+    _observer = [self.counter observeCountChange:^(NSInteger count){
+        [wSelf p_updateCountLabel];
+    }];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [_observer stopObserving];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)didTapCountUp:(id)sender {
+    [self.counter increment];
+}
+
+- (IBAction)didTapCountClear:(id)sender {
+    [self.counter clear];
+}
+
+- (void) p_updateCountLabel {
+    self.countLabel.text = [NSString stringWithFormat:@"Count:%ld",self.counter.count];
+}
+
+
 
 @end

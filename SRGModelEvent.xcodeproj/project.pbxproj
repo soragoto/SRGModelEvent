@@ -16,6 +16,7 @@
 		CC367D301A51819100B87159 /* SRGModelEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC367D2F1A51819100B87159 /* SRGModelEventTests.m */; };
 		CC367D3C1A518FE000B87159 /* SRGModelEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CC367D3B1A518FE000B87159 /* SRGModelEvent.m */; };
 		CC367D3F1A51AA5400B87159 /* SRGModelEventObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = CC367D3E1A51AA5400B87159 /* SRGModelEventObserver.m */; };
+		CC367D421A51CACE00B87159 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC367D411A51CACE00B87159 /* Counter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		CC367D3B1A518FE000B87159 /* SRGModelEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGModelEvent.m; sourceTree = "<group>"; };
 		CC367D3D1A51AA5400B87159 /* SRGModelEventObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGModelEventObserver.h; sourceTree = "<group>"; };
 		CC367D3E1A51AA5400B87159 /* SRGModelEventObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGModelEventObserver.m; sourceTree = "<group>"; };
+		CC367D401A51CACE00B87159 /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
+		CC367D411A51CACE00B87159 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				CC367D201A51819100B87159 /* Images.xcassets */,
 				CC367D221A51819100B87159 /* LaunchScreen.xib */,
 				CC367D131A51819100B87159 /* Supporting Files */,
+				CC367D401A51CACE00B87159 /* Counter.h */,
+				CC367D411A51CACE00B87159 /* Counter.m */,
 			);
 			path = SRGModelEvent;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				CC367D3C1A518FE000B87159 /* SRGModelEvent.m in Sources */,
 				CC367D191A51819100B87159 /* AppDelegate.m in Sources */,
 				CC367D161A51819100B87159 /* main.m in Sources */,
+				CC367D421A51CACE00B87159 /* Counter.m in Sources */,
 				CC367D3F1A51AA5400B87159 /* SRGModelEventObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +440,7 @@
 				CC367D351A51819100B87159 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC367D361A51819100B87159 /* Build configuration list for PBXNativeTarget "SRGModelEventTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				CC367D381A51819100B87159 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
