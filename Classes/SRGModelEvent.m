@@ -24,6 +24,7 @@ static const NSString *EventNamePrefix = @"SRGModelEvent";
 }
 
 - (SRGModelEventObserver *)observe:(NSString *)eventName handler:(void (^)(NSDictionary *))handler{
+    [self p_assertKeyIsRequired];
     id observer = [[NSNotificationCenter defaultCenter]
                    addObserverForName: [self p_fullEventName:eventName]
                    object:self
@@ -37,6 +38,7 @@ static const NSString *EventNamePrefix = @"SRGModelEvent";
 }
 
 - (void)notify:(NSString *)eventName data:(NSDictionary *)data {
+    [self p_assertKeyIsRequired];
     NSNotification *notification = [ NSNotification
                                     notificationWithName: [self p_fullEventName:eventName]
                                     object:self
@@ -51,6 +53,10 @@ static const NSString *EventNamePrefix = @"SRGModelEvent";
 
 - (NSString *) p_fullEventName:(NSString *)eventName {
     return [@[ EventNamePrefix, _key, eventName ] componentsJoinedByString:@"."];
+}
+
+- (void) p_assertKeyIsRequired {
+    NSAssert(_key != nil,@"key is required params");
 }
 
 @end
