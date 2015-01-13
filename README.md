@@ -14,7 +14,7 @@ SRGModelEvent is thin wrapper library of NSNotification to observe/notify your m
 Add the following line to your podfile and run `pod update`.
 
 ```ruby
-pod 'SRGModelEvent', :git => 'https://github.com/soragoto/SRGModelEvent.git', :tag => '0.0.1'
+pod 'SRGModelEvent'
 ````
 
 ## Usage
