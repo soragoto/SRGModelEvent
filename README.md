@@ -1,6 +1,12 @@
 SRGModelEvent
 =============
 
+[![CI Status](http://img.shields.io/travis/soragoto/SRGModelEvent.svg?style=flat)](https://travis-ci.org/soragoto/SRGModelEvent)
+[![Version](https://img.shields.io/cocoapods/v/SRGModelEvent.svg?style=flat)](https://github.com/soragoto/SRGModelEvent)
+[![License](https://img.shields.io/cocoapods/l/SRGModelEvent.svg?style=flat)](https://github.com/soragoto/SRGModelEvent)
+[![Platform](https://img.shields.io/cocoapods/p/SRGModelEvent.svg?style=flat)](https://github.com/soragoto/SRGModelEvent)
+
+
 SRGModelEvent is thin wrapper library of NSNotification to observe/notify your model more easily.
 
 ## Installation
@@ -50,3 +56,6 @@ And you can observe/notify event with custom data.
     // do something
 }];
 ````
+## LICENSE
+
+SRGModelEvent is released under the MIT license. See LICENSE for details.
